@@ -1,0 +1,15 @@
+{
+    "schemaVersion": 1,
+    "hotfixesFormat": null,
+    "versions": [
+        {
+            "id": "0.1.0",
+            "releasedAt": currentmillis,
+            "promotions": {	
+				"downloads": {
+					"base": "download_link-MINECRAFT_1.5-GITHUB"
+				}
+			}
+		}
+    ]
+}
