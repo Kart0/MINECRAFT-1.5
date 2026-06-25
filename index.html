@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizador |MC 1.5 -MP-|</title>
+    <title>Actualizador |MC 1.5|</title>
     <!-- Incluir Marked.js para soporte Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
@@ -689,7 +689,7 @@
 
         async function loadChangelogFromGitHub(versionId) {
             try {
-                const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/Kart0/mc1.5_multiplayer_experience/main';
+                const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/main';
                 const url = `${GITHUB_BASE_URL}/versions/${versionId}/changelog.txt`;
                 const response = await fetch(url);
                 if (!response.ok) return null;
