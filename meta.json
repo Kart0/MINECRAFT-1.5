@@ -4,7 +4,7 @@
     "versions": [
         {
             "id": "0.1.0",
-            "releasedAt": currentmillis,
+            "releasedAt": 1782353715127,
             "promotions": {	
 				"downloads": {
 					"base": "download_link-MINECRAFT_1.5-GITHUB"
