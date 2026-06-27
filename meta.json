@@ -4,10 +4,10 @@
     "versions": [
         {
             "id": "0.1.0",
-            "releasedAt": 1782353715127,
+            "releasedAt": 1782526148402,
             "promotions": {	
 				"downloads": {
-					"base": "download_link-MINECRAFT_1.5-GITHUB"
+					"base": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.1.0/MC1.5.-.CLOSED.BETA.v0.1.0.mrpack"
 				}
 			}
 		}
