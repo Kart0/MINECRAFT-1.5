@@ -1,0 +1,13 @@
+{
+  "browser_title": "Updater |MC 1.5|",
+  "versions_title": "VERSIONS",
+  "base_version_title": "⚡ BASE VERSION ⚡",
+  "updates_title": "📦 UPDATES 📦",
+  "loading": "Loading changelog...",
+  "error_no_changelog": "Changelog not found for this version",
+  "error_loading": "Error loading version changelog",
+  "error_versions": "Error loading versions",
+  "select_version": "Select a version to view details",
+  "no_download_links": "No download links available.",
+  "select_language_title": "🌐 SELECT LANGUAGE"
+}

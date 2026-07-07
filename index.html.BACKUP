@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="browserTitle">Actualizador |MC 1.5|</title>
+    <title>Actualizador |MC 1.5|</title>
     <!-- Incluir Marked.js para soporte Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        /* (CSS completo, igual que antes) */
+        /* (Aquí va TODO el CSS que ya tenías, sin cambios) */
         @font-face {
             font-family: 'Minecraft';
             src: url('media_files/MinecraftRegular-Bmg3.otf') format('opentype');
@@ -142,7 +142,7 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
         }
 
-        /* Botones fijos */
+        /* Botón de Ko-fi (anteriormente back-button) */
         .kofi-button {
             position: fixed;
             top: 30px;
@@ -190,54 +190,7 @@
             transform: translateY(0);
         }
 
-        .lang-button {
-            position: fixed;
-            top: 30px;
-            right: 45px;
-            width: 75px;
-            height: 75px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: transparent;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            color: white;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-        }
-
-        .lang-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('media_files/language.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -1;
-            transition: all 0.3s ease;
-            border-radius: 0;
-        }
-
-        .lang-button:hover::before {
-            background-image: url('media_files/language_hovered.png');
-        }
-
-        .lang-button:hover {
-            transform: translateY(-3px);
-        }
-
-        .lang-button:active {
-            transform: translateY(0);
-        }
-
-        /* Estilos de secciones */
+        /* El resto del CSS continúa igual hasta el final */
         .base-version-section {
             margin-bottom: 20px;
             border-bottom: 2px solid rgba(255, 215, 0, 0.3);
@@ -367,7 +320,6 @@
             transform: translateY(0);
         }
 
-        /* Modales */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -411,9 +363,11 @@
             gap: 30px;
             margin-top: 20px;
             flex-wrap: wrap;
+            /* Ajustes para alinear izquierda/derecha cuando hay dos botones */
             align-items: center;
         }
 
+        /* Clase para cuando hay dos botones: los separa a los extremos */
         .modal-buttons.two-buttons {
             justify-content: space-between;
         }
@@ -467,55 +421,6 @@
             max-width: 65%;
             max-height: 65%;
             object-fit: contain;
-        }
-
-        .lang-modal-button {
-            width: 200px;
-            height: 60px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: transparent;
-            position: relative;
-            overflow: hidden;
-            border-radius: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            font-size: 1.2em;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            margin: 8px auto;
-        }
-
-        .lang-modal-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('media_files/button.png');
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: -1;
-            transition: all 0.3s ease;
-            border-radius: 0;
-        }
-
-        .lang-modal-button:hover::before {
-            background-image: url('media_files/button_highlighted.png');
-            transform: scale(1.02);
-        }
-
-        .lang-modal-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .lang-modal-button:active {
-            transform: translateY(0);
         }
 
         .versions-title {
@@ -714,20 +619,6 @@
                 top: 20px;
                 left: 20px;
             }
-
-            .lang-button {
-                width: 50px;
-                height: 50px;
-                font-size: 1.6em;
-                top: 20px;
-                right: 20px;
-            }
-
-            .lang-modal-button {
-                width: 160px;
-                height: 50px;
-                font-size: 1em;
-            }
         }
     </style>
 </head>
@@ -748,22 +639,18 @@
 
     <div class="content-container">
         <div class="sidebar">
-            <div class="versions-title" id="versionsTitle">VERSIONES</div>
+            <div class="versions-title">VERSIONES</div>
             <div id="versions-list"></div>
         </div>
 
         <div class="main-content" id="version-details">
-            <div class="loading" id="selectVersionMsg">Selecciona una versión para ver los detalles</div>
+            <div class="loading">Selecciona una versión para ver los detalles</div>
         </div>
     </div>
 
-    <!-- Botón Ko-fi -->
+    <!-- Botón de Ko-fi con enlace externo -->
     <button class="kofi-button" onclick="window.open('https://ko-fi.com/kartillomc2', '_blank')"></button>
 
-    <!-- Botón de idioma -->
-    <button class="lang-button" id="langButton"></button>
-
-    <!-- Modal de descarga -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
             <div class="modal-title" id="modalTitle">v0.0.0</div>
@@ -771,357 +658,23 @@
         </div>
     </div>
 
-    <!-- Modal de idioma -->
-    <div class="modal-overlay" id="langModalOverlay">
-        <div class="modal-content">
-            <div class="modal-title" id="langModalTitle">🌐 SELECCIONAR IDIOMA</div>
-            <div id="langButtonsContainer"></div>
-        </div>
-    </div>
-
     <script>
-        // ============================================================
-        // CONFIGURACIÓN
-        // ============================================================
+        // NUEVA URL del meta.json
         const META_JSON_URL = 'https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/meta.json';
+        
+        // ID de la versión base (única)
         const BASE_VERSION_ID = '0.1.0';
-        const LANG_FILES_PATH = 'lang_files/';
-        const CHANGELOG_BASE_URL = 'https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/main/versions/';
 
-        const SUPPORTED_LANGS = ['es', 'en', 'pt', 'ru'];
-        const LANG_NAMES = {
-            es: 'ESPAÑOL',
-            en: 'ENGLISH',
-            pt: 'PORTUGUÊS',
-            ru: 'РУССКИЙ'
-        };
-        const FALLBACK_LANG = 'en';
-
-        let currentLang = FALLBACK_LANG;
-        let translations = {};
         let currentVersionId = '';
         let currentVersionData = null;
-        let versionsData = [];
 
-        // ============================================================
-        // FUNCIONES DE IDIOMA
-        // ============================================================
-
-        function detectBrowserLanguage() {
-            const langs = navigator.languages || [navigator.language];
-            for (let l of langs) {
-                const base = l.split('-')[0].toLowerCase();
-                if (SUPPORTED_LANGS.includes(base)) {
-                    console.log(`Idioma detectado: ${base}`);
-                    return base;
-                }
-            }
-            console.log(`Ningún idioma soportado detectado, usando fallback: ${FALLBACK_LANG}`);
-            return FALLBACK_LANG;
-        }
-
-        async function loadTranslations(lang) {
-            try {
-                const url = `${LANG_FILES_PATH}${lang}.json?t=${Date.now()}`;
-                console.log(`Cargando traducciones desde: ${url}`);
-                const resp = await fetch(url);
-                if (!resp.ok) {
-                    console.warn(`Error ${resp.status} al cargar ${lang}.json`);
-                    if (lang !== FALLBACK_LANG) {
-                        return await loadTranslations(FALLBACK_LANG);
-                    }
-                    return {};
-                }
-                const data = await resp.json();
-                console.log(`Traducciones cargadas para ${lang}:`, data);
-                return data;
-            } catch (e) {
-                console.error(`Error en loadTranslations para ${lang}:`, e);
-                if (lang !== FALLBACK_LANG) {
-                    return await loadTranslations(FALLBACK_LANG);
-                }
-                return {};
-            }
-        }
-
-        function applyTranslations() {
-            const t = translations;
-            console.log('Aplicando traducciones:', t);
-            
-            // Título del navegador
-            if (t.browser_title) {
-                document.title = t.browser_title;
-                document.getElementById('browserTitle').textContent = t.browser_title;
-            }
-            
-            // Título de versiones
-            const titleEl = document.getElementById('versionsTitle');
-            if (titleEl) titleEl.textContent = t.versions_title || 'VERSIONES';
-            
-            // Mensaje de selección
-            const selectMsg = document.getElementById('selectVersionMsg');
-            if (selectMsg) {
-                selectMsg.textContent = t.select_version || 'Selecciona una versión para ver los detalles';
-            }
-
-            // Guardar títulos de sección para usar al crear los elementos
-            window._baseTitleText = t.base_version_title || '⚡ VERSIÓN BASE ⚡';
-            window._updatesTitleText = t.updates_title || '📦 ACTUALIZACIONES 📦';
-            
-            // Actualizar títulos de sección ya existentes (si los hay)
-            const baseTitleEl = document.querySelector('.base-version-title');
-            if (baseTitleEl) baseTitleEl.textContent = window._baseTitleText;
-            
-            const updatesTitleEl = document.querySelector('.updates-title');
-            if (updatesTitleEl) updatesTitleEl.textContent = window._updatesTitleText;
-
-            // Si hay versión seleccionada, recargar changelog
-            if (currentVersionId) {
-                showVersionDetails(currentVersionId);
-            }
-        }
-
-        async function setLanguage(lang) {
-            if (!SUPPORTED_LANGS.includes(lang)) {
-                lang = FALLBACK_LANG;
-            }
-            currentLang = lang;
-            localStorage.setItem('selectedLanguage', lang);
-            console.log(`Cambiando idioma a: ${lang}`);
-            
-            translations = await loadTranslations(lang);
-            applyTranslations();
-            
-            // Si hay versión seleccionada, recargar detalles
-            if (currentVersionId) {
-                await showVersionDetails(currentVersionId);
-            }
-        }
-
-        async function initLanguage() {
-            let saved = localStorage.getItem('selectedLanguage');
-            if (saved && SUPPORTED_LANGS.includes(saved)) {
-                currentLang = saved;
-                console.log(`Idioma restaurado de localStorage: ${currentLang}`);
-            } else {
-                currentLang = detectBrowserLanguage();
-            }
-            translations = await loadTranslations(currentLang);
-            applyTranslations();
-        }
-
-        // ============================================================
-        // MODALES
-        // ============================================================
-
-        function cerrarModal(modalId) {
-            document.getElementById(modalId).classList.remove('active');
-        }
-
-        function abrirModal(modalId) {
-            document.getElementById(modalId).classList.add('active');
-        }
-
-        // ============================================================
-        // MODAL DE DESCARGA
-        // ============================================================
-
-        function mostrarModalDescarga(versionId) {
-            currentVersionId = versionId;
-            currentVersionData = versionsData.find(v => v.id === versionId);
-            
-            const modalTitle = document.getElementById('modalTitle');
-            modalTitle.textContent = `v${versionId}`;
-            
-            const container = document.getElementById('modalButtonsContainer');
-            container.innerHTML = '';
-            container.classList.remove('two-buttons');
-
-            if (versionId === BASE_VERSION_ID) {
-                const downloads = currentVersionData?.promotions?.downloads || {};
-                const baseUrl = downloads.base || null;
-                const liteUrl = downloads.base_lite || null;
-
-                if (baseUrl) {
-                    const btn = createModalButton('media_files/modpack_logo.png', 'Base', () => {
-                        window.open(baseUrl, '_blank');
-                        cerrarModal('modalOverlay');
-                    });
-                    container.appendChild(btn);
-                }
-
-                if (liteUrl) {
-                    const btn = createModalButton('media_files/modpack_logo_lite.png', 'Base Lite', () => {
-                        window.open(liteUrl, '_blank');
-                        cerrarModal('modalOverlay');
-                    });
-                    container.appendChild(btn);
-                }
-
-                if (container.children.length === 2) {
-                    container.classList.add('two-buttons');
-                }
-
-                if (container.children.length === 0) {
-                    container.innerHTML = `<p style="color:white;">${translations.no_download_links || 'No hay enlaces de descarga disponibles.'}</p>`;
-                }
-            } else {
-                const downloads = currentVersionData?.promotions?.downloads || {};
-                const baseUrl = downloads.base || null;
-                
-                if (baseUrl) {
-                    const btn = createModalButton('media_files/modpack_logo.png', 'Descargar', () => {
-                        window.open(baseUrl, '_blank');
-                        cerrarModal('modalOverlay');
-                    });
-                    container.appendChild(btn);
-                } else {
-                    const modrinthUrl = downloads.modrinth || null;
-                    const genericUrl = downloads.generic || null;
-                    
-                    if (modrinthUrl) {
-                        const btn = createModalButton('media_files/Modrinth_Logo.png', 'Modrinth', () => {
-                            window.open(modrinthUrl, '_blank');
-                            cerrarModal('modalOverlay');
-                        });
-                        container.appendChild(btn);
-                    }
-                    
-                    if (genericUrl) {
-                        const btn = createModalButton('media_files/SKLauncher_Logo.png', 'SKLauncher', () => {
-                            window.open(genericUrl, '_blank');
-                            cerrarModal('modalOverlay');
-                        });
-                        container.appendChild(btn);
-                    }
-                }
-
-                if (container.children.length === 0) {
-                    container.innerHTML = `<p style="color:white;">${translations.no_download_links || 'No hay enlaces de descarga disponibles.'}</p>`;
-                }
-            }
-            
-            abrirModal('modalOverlay');
-        }
-
-        function createModalButton(imgSrc, alt, onclick) {
-            const btn = document.createElement('button');
-            btn.className = 'modal-button';
-            const img = document.createElement('img');
-            img.src = imgSrc;
-            img.alt = alt;
-            btn.appendChild(img);
-            btn.onclick = onclick;
-            return btn;
-        }
-
-        // ============================================================
-        // MODAL DE IDIOMA
-        // ============================================================
-
-        function mostrarModalIdioma() {
-            const container = document.getElementById('langButtonsContainer');
-            container.innerHTML = '';
-            
-            SUPPORTED_LANGS.forEach(lang => {
-                const btn = document.createElement('button');
-                btn.className = 'lang-modal-button';
-                btn.textContent = LANG_NAMES[lang];
-                btn.onclick = async () => {
-                    await setLanguage(lang);
-                    cerrarModal('langModalOverlay');
-                    if (currentVersionId) {
-                        await showVersionDetails(currentVersionId);
-                    }
-                };
-                container.appendChild(btn);
-            });
-
-            document.getElementById('langModalTitle').textContent = translations.select_language_title || '🌐 SELECCIONAR IDIOMA';
-            
-            abrirModal('langModalOverlay');
-        }
-
-        // ============================================================
-        // CHANGELOG
-        // ============================================================
-
-        async function loadChangelogFromGitHub(versionId, lang) {
-            try {
-                const url = `${CHANGELOG_BASE_URL}${versionId}/changelog_${lang}.txt?t=${Date.now()}`;
-                console.log(`Cargando changelog desde: ${url}`);
-                const response = await fetch(url);
-                if (!response.ok) {
-                    console.warn(`No se encontró changelog_${lang}.txt para ${versionId}, intentando con fallback.`);
-                    if (lang !== FALLBACK_LANG) {
-                        return await loadChangelogFromGitHub(versionId, FALLBACK_LANG);
-                    }
-                    return null;
-                }
-                return await response.text();
-            } catch (error) {
-                console.error(`Error cargando changelog para ${versionId} en ${lang}:`, error);
-                if (lang !== FALLBACK_LANG) {
-                    return await loadChangelogFromGitHub(versionId, FALLBACK_LANG);
-                }
-                return null;
-            }
-        }
-
-        async function showVersionDetails(versionId) {
-            const detailsContainer = document.getElementById('version-details');
-            detailsContainer.innerHTML = `<div class="loading">${translations.loading || 'Cargando changelog...'}</div>`;
-            try {
-                const content = await loadChangelogFromGitHub(versionId, currentLang);
-                if (content) {
-                    detailsContainer.innerHTML = `<div class="changelog-content">${marked.parse(content)}</div>`;
-                } else {
-                    detailsContainer.innerHTML = `<div class="error">${translations.error_no_changelog || 'No se encontró el changelog para esta versión'}</div>`;
-                }
-            } catch (error) {
-                console.error(error);
-                detailsContainer.innerHTML = `<div class="error">${translations.error_loading || 'Error cargando el changelog de la versión'}</div>`;
-            }
-        }
-
-        // ============================================================
-        // LISTA DE VERSIONES
-        // ============================================================
-
-        function hasDownloadLinks(version) {
-            const d = version?.promotions?.downloads;
-            if (!d) return false;
-            return !!(d.base || d.base_lite || d.modrinth || d.generic);
-        }
-
-        function createVersionElement(version, isBaseVersion = false) {
-            const el = document.createElement('div');
-            el.className = 'version-item';
-            if (isBaseVersion) {
-                el.classList.add('base-version');
-                el.classList.add('selected');
-            }
-            
-            const hasLinks = hasDownloadLinks(version);
-            const btnHtml = hasLinks ? 
-                `<button class="version-button" onclick="mostrarModalDescarga('${version.id}')">⤓</button>` : '';
-            
-            el.innerHTML = `
-                <div class="version-info">
-                    <div class="version-id">${version.id}</div>
-                    <div class="version-date">${formatDate(version.releasedAt)}</div>
-                </div>
-                ${btnHtml}
-            `;
-            
-            el.addEventListener('click', () => {
-                document.querySelectorAll('.version-item').forEach(item => item.classList.remove('selected'));
-                el.classList.add('selected');
-                showVersionDetails(version.id);
-            });
-            
-            return el;
-        }
+        marked.setOptions({
+            highlight: function(code, lang) {
+                return code;
+            },
+            breaks: true,
+            gfm: true
+        });
 
         function formatDate(timestamp) {
             const date = new Date(timestamp);
@@ -1132,86 +685,268 @@
             });
         }
 
+        // Función: comprueba si la versión tiene al menos un enlace de descarga válido
+        function hasDownloadLinks(version) {
+            const downloads = version?.promotions?.downloads;
+            if (!downloads) return false;
+            // Consideramos que tiene enlaces si existe 'base' o 'base_lite' o 'modrinth' o 'generic'
+            return !!(downloads.base || downloads.base_lite || downloads.modrinth || downloads.generic);
+        }
+
+        // Obtiene el enlace de descarga principal (prioriza base, luego modrinth, luego generic)
+        function getDownloadUrl(version, key) {
+            const downloads = version?.promotions?.downloads;
+            if (!downloads) return null;
+            if (key) return downloads[key] || null;
+            // Si no se pasa key, devuelve el primero disponible: base, base_lite, modrinth, generic
+            return downloads.base || downloads.base_lite || downloads.modrinth || downloads.generic || null;
+        }
+
+        async function loadChangelogFromGitHub(versionId) {
+            try {
+                const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/main';
+                const url = `${GITHUB_BASE_URL}/versions/${versionId}/changelog.txt`;
+                const response = await fetch(url);
+                if (!response.ok) return null;
+                return await response.text();
+            } catch (error) {
+                console.error(`Error cargando changelog para versión ${versionId}:`, error);
+                return null;
+            }
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+
+        function mostrarModalDescarga(versionId) {
+            currentVersionId = versionId;
+            currentVersionData = window.versionsData.find(v => v.id === versionId);
+            
+            const modalTitle = document.getElementById('modalTitle');
+            modalTitle.textContent = `v${versionId}`;
+            
+            const container = document.getElementById('modalButtonsContainer');
+            container.innerHTML = '';
+            // Limpiamos clases previas
+            container.classList.remove('two-buttons');
+
+            // Si es la versión base, mostramos botones para base y base_lite si existen
+            if (versionId === BASE_VERSION_ID) {
+                const downloads = currentVersionData?.promotions?.downloads || {};
+                const baseUrl = downloads.base || null;
+                const liteUrl = downloads.base_lite || null;
+
+                // Botón para base
+                if (baseUrl) {
+                    const btnBase = document.createElement('button');
+                    btnBase.className = 'modal-button';
+                    const imgBase = document.createElement('img');
+                    imgBase.src = 'media_files/modpack_logo.png';
+                    imgBase.alt = 'Base';
+                    btnBase.appendChild(imgBase);
+                    btnBase.onclick = () => {
+                        window.open(baseUrl, '_blank');
+                        cerrarModal();
+                    };
+                    container.appendChild(btnBase);
+                }
+
+                // Botón para base_lite
+                if (liteUrl) {
+                    const btnLite = document.createElement('button');
+                    btnLite.className = 'modal-button';
+                    const imgLite = document.createElement('img');
+                    imgLite.src = 'media_files/modpack_logo_lite.png';
+                    imgLite.alt = 'Base Lite';
+                    btnLite.appendChild(imgLite);
+                    btnLite.onclick = () => {
+                        window.open(liteUrl, '_blank');
+                        cerrarModal();
+                    };
+                    container.appendChild(btnLite);
+                }
+
+                // Si hay dos botones, aplicar clase para alinearlos a los extremos
+                if (container.children.length === 2) {
+                    container.classList.add('two-buttons');
+                }
+                // Si solo hay uno, se mantiene centrado (por defecto)
+                // Si no hay ninguno, mostrar mensaje
+                if (container.children.length === 0) {
+                    container.innerHTML = '<p style="color:white;">No hay enlaces de descarga disponibles.</p>';
+                }
+            } else {
+                // Comportamiento original para cualquier otra versión (actualizaciones)
+                const downloads = currentVersionData?.promotions?.downloads || {};
+                const baseUrl = downloads.base || null;
+                
+                if (baseUrl) {
+                    const button = document.createElement('button');
+                    button.className = 'modal-button';
+                    const img = document.createElement('img');
+                    img.src = 'media_files/modpack_logo.png';
+                    img.alt = 'Descargar';
+                    button.appendChild(img);
+                    button.onclick = () => {
+                        window.open(baseUrl, '_blank');
+                        cerrarModal();
+                    };
+                    container.appendChild(button);
+                } else {
+                    const modrinthUrl = downloads.modrinth || null;
+                    const genericUrl = downloads.generic || null;
+                    
+                    if (modrinthUrl) {
+                        const btnMod = document.createElement('button');
+                        btnMod.className = 'modal-button';
+                        const imgMod = document.createElement('img');
+                        imgMod.src = 'media_files/Modrinth_Logo.png';
+                        imgMod.alt = 'Modrinth';
+                        btnMod.appendChild(imgMod);
+                        btnMod.onclick = () => {
+                            window.open(modrinthUrl, '_blank');
+                            cerrarModal();
+                        };
+                        container.appendChild(btnMod);
+                    }
+                    
+                    if (genericUrl) {
+                        const btnGen = document.createElement('button');
+                        btnGen.className = 'modal-button';
+                        const imgGen = document.createElement('img');
+                        imgGen.src = 'media_files/SKLauncher_Logo.png';
+                        imgGen.alt = 'SKLauncher';
+                        btnGen.appendChild(imgGen);
+                        btnGen.onclick = () => {
+                            window.open(genericUrl, '_blank');
+                            cerrarModal();
+                        };
+                        container.appendChild(btnGen);
+                    }
+                }
+                
+                // Si no hay botones, mostrar mensaje
+                if (container.children.length === 0) {
+                    container.innerHTML = '<p style="color:white;">No hay enlaces de descarga disponibles.</p>';
+                }
+            }
+            
+            document.getElementById('modalOverlay').classList.add('active');
+        }
+
+        async function showVersionDetails(versionId) {
+            const detailsContainer = document.getElementById('version-details');
+            detailsContainer.innerHTML = '<div class="loading">Cargando changelog...</div>';
+            try {
+                const changelogContent = await loadChangelogFromGitHub(versionId);
+                if (changelogContent) {
+                    detailsContainer.innerHTML = `<div class="changelog-content">${marked.parse(changelogContent)}</div>`;
+                } else {
+                    detailsContainer.innerHTML = '<div class="error">No se encontró el changelog para esta versión</div>';
+                }
+            } catch (error) {
+                console.error(error);
+                detailsContainer.innerHTML = '<div class="error">Error cargando el changelog de la versión</div>';
+            }
+        }
+
+        function createVersionElement(version, isBaseVersion = false, isFirstUpdate = false) {
+            const versionElement = document.createElement('div');
+            versionElement.className = 'version-item';
+            if (isBaseVersion) versionElement.classList.add('base-version');
+            if (isBaseVersion) versionElement.classList.add('selected');
+            
+            const hasLinks = hasDownloadLinks(version);
+            // Mostrar botón de descarga para todas las versiones que tengan enlaces
+            const showDownloadButton = hasLinks;
+            
+            const buttonHtml = showDownloadButton ? 
+                `<button class="version-button" onclick="mostrarModalDescarga('${version.id}')">⤓</button>` : '';
+            
+            versionElement.innerHTML = `
+                <div class="version-info">
+                    <div class="version-id">${version.id}</div>
+                    <div class="version-date">${formatDate(version.releasedAt)}</div>
+                </div>
+                ${buttonHtml}
+            `;
+            
+            versionElement.addEventListener('click', () => {
+                document.querySelectorAll('.version-item').forEach(item => item.classList.remove('selected'));
+                versionElement.classList.add('selected');
+                showVersionDetails(version.id);
+            });
+            
+            return versionElement;
+        }
+
         async function loadVersions() {
             try {
-                const resp = await fetch(META_JSON_URL + '?t=' + Date.now());
-                const data = await resp.json();
-                versionsData = data.versions;
+                const response = await fetch(META_JSON_URL + '?t=' + new Date().getTime());
+                const data = await response.json();
+                window.versionsData = data.versions;
                 
-                const list = document.getElementById('versions-list');
-                list.innerHTML = '';
-
-                const baseVersion = versionsData.find(v => v.id === BASE_VERSION_ID);
-                const otherVersions = versionsData.filter(v => v.id !== BASE_VERSION_ID);
-                const sortedOthers = otherVersions.sort((a, b) => b.releasedAt - a.releasedAt);
-
-                // Sección base
+                const versionsList = document.getElementById('versions-list');
+                versionsList.innerHTML = '';
+                
+                // Identificar la versión base por ID
+                const baseVersion = data.versions.find(v => v.id === BASE_VERSION_ID);
+                // El resto son actualizaciones
+                const otherVersions = data.versions.filter(v => v.id !== BASE_VERSION_ID);
+                const sortedOtherVersions = otherVersions.sort((a, b) => b.releasedAt - a.releasedAt);
+                
+                // Sección de bases (solo una entrada para la versión base)
                 const baseSection = document.createElement('div');
                 baseSection.className = 'base-version-section';
                 const baseTitle = document.createElement('div');
                 baseTitle.className = 'base-version-title';
-                baseTitle.textContent = window._baseTitleText || '⚡ VERSIÓN BASE ⚡';
+                baseTitle.textContent = '⚡ VERSIÓN BASE ⚡';
                 baseSection.appendChild(baseTitle);
                 
                 if (baseVersion) {
-                    baseSection.appendChild(createVersionElement(baseVersion, true));
+                    const baseElement = createVersionElement(baseVersion, true, false);
+                    baseSection.appendChild(baseElement);
                 }
-                list.appendChild(baseSection);
-
-                // Sección actualizaciones
-                if (sortedOthers.length > 0) {
+                versionsList.appendChild(baseSection);
+                
+                // Sección de actualizaciones
+                if (sortedOtherVersions.length > 0) {
                     const updatesSection = document.createElement('div');
                     updatesSection.className = 'updates-section';
                     const updatesTitle = document.createElement('div');
                     updatesTitle.className = 'updates-title';
-                    updatesTitle.textContent = window._updatesTitleText || '📦 ACTUALIZACIONES 📦';
+                    updatesTitle.textContent = '📦 ACTUALIZACIONES 📦';
                     updatesSection.appendChild(updatesTitle);
                     
-                    sortedOthers.forEach(version => {
-                        updatesSection.appendChild(createVersionElement(version, false));
+                    sortedOtherVersions.forEach((version, index) => {
+                        const isFirstUpdate = (index === 0);
+                        const versionElement = createVersionElement(version, false, isFirstUpdate);
+                        updatesSection.appendChild(versionElement);
                     });
-                    list.appendChild(updatesSection);
+                    versionsList.appendChild(updatesSection);
                 }
-
-                // Seleccionar base por defecto
+                
+                // Seleccionar la base por defecto para mostrar detalles
                 if (baseVersion) {
-                    currentVersionId = baseVersion.id;
-                    await showVersionDetails(baseVersion.id);
-                } else if (sortedOthers.length > 0) {
-                    currentVersionId = sortedOthers[0].id;
-                    await showVersionDetails(sortedOthers[0].id);
+                    showVersionDetails(baseVersion.id);
+                } else if (sortedOtherVersions.length > 0) {
+                    showVersionDetails(sortedOtherVersions[0].id);
                 }
+                
             } catch (error) {
-                console.error('Error cargando versiones:', error);
-                document.getElementById('versions-list').innerHTML = `<div class="error">${translations.error_versions || 'Error cargando versiones'}</div>`;
+                console.error('Error cargando las versiones:', error);
+                document.getElementById('versions-list').innerHTML = '<div class="error">Error cargando versiones</div>';
             }
         }
 
-        // ============================================================
-        // INICIO
-        // ============================================================
-
-        document.addEventListener('DOMContentLoaded', async function() {
-            // Video
+        document.addEventListener('DOMContentLoaded', function() {
             const video = document.querySelector('video');
             video.play().catch(e => console.log('Error al reproducir el video:', e));
-
-            // Inicializar idioma
-            await initLanguage();
-
-            // Cargar versiones
-            await loadVersions();
-
-            // Eventos de modales
+            loadVersions();
             document.getElementById('modalOverlay').addEventListener('click', function(e) {
-                if (e.target === this) cerrarModal('modalOverlay');
+                if (e.target === this) cerrarModal();
             });
-            document.getElementById('langModalOverlay').addEventListener('click', function(e) {
-                if (e.target === this) cerrarModal('langModalOverlay');
-            });
-
-            // Botón de idioma
-            document.getElementById('langButton').addEventListener('click', mostrarModalIdioma);
         });
     </script>
 </body>

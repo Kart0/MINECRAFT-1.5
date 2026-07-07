@@ -1,0 +1,13 @@
+{
+  "browser_title": "Обновлятор |MC 1.5|",
+  "versions_title": "ВЕРСИИ",
+  "base_version_title": "⚡ БАЗОВАЯ ВЕРСИЯ ⚡",
+  "updates_title": "📦 ОБНОВЛЕНИЯ 📦",
+  "loading": "Загрузка списка изменений...",
+  "error_no_changelog": "Список изменений не найден для этой версии",
+  "error_loading": "Ошибка загрузки списка изменений",
+  "error_versions": "Ошибка загрузки версий",
+  "select_version": "Выберите версию для просмотра деталей",
+  "no_download_links": "Нет доступных ссылок для скачивания.",
+  "select_language_title": "🌐 ВЫБЕРИТЕ ЯЗЫК"
+}

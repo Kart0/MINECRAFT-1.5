@@ -1,0 +1,13 @@
+{
+  "browser_title": "Actualizador |MC 1.5|",
+  "versions_title": "VERSIONES",
+  "base_version_title": "⚡ VERSIÓN BASE ⚡",
+  "updates_title": "📦 ACTUALIZACIONES 📦",
+  "loading": "Cargando changelog...",
+  "error_no_changelog": "No se encontró el changelog para esta versión",
+  "error_loading": "Error cargando el changelog de la versión",
+  "error_versions": "Error cargando versiones",
+  "select_version": "Selecciona una versión para ver los detalles",
+  "no_download_links": "No hay enlaces de descarga disponibles.",
+  "select_language_title": "🌐 SELECCIONAR IDIOMA"
+}
