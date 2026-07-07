@@ -1,26 +1,27 @@
-## **SECOND LAST MC1.5 CLOSED BETA**
+## **ВТОРАЯ ПОСЛЕДНЯЯ ЗАКРЫТАЯ БЕТА MC1.5**
 
-### **[0.2.0] UPDATE**
+### **ОБНОВЛЕНИЕ [0.2.0]**
 
-This update brings many optimizations and take off redundant content to improve client stability, the update its necessary for enter the test-server inside the 'Multiplayer' Tab (every single MC1.5 feature will only be available on the server)
+Это обновление добавляет различные оптимизации и убирает лишний контент, чтобы улучшить стабильность клиента. Обновление обязательно для входа на тестовый сервер внутри вкладки "Многопользовательской игры" (каждая фишка MC1.5 будет доступна только на сервере)
 
 <details>
-<summary>Wich version should I download?</summary>
+<summary>Какую версию мне скачать?</summary>
 
 | Modpack Version  | PC Specs |
 | :-------------: |:-------------:|
-| Full Version      | Dedicated GPU and above 8gb ram     |
-| Lite Version      | Low-end devices     |
+| Полная версия      | Дискретная видеокарта и минимум 8 ГБ ОЗУ     |
+| Упрощённая версия      | Старые/немощные устройства     |
 
 </details>
 
 [TEASER IMAGE/VIDEO]
 
-***Developer's Note***
+***Заметка разработчика***
 
-*Hopefully everything will work out well for as many people as possible, I would like to receive your feedback **both** on [Discord](https://discord.com/channels/1397307316814221323/1519778359641509948) and [GitHub](https://github.com/Kart0/MINECRAFT-1.5/issues)*
+*Надеемся, что всё сработает по плану для наибольшего количества людей из возможных. Я буду рад получить ваш фидбек **на обоих** платформах: [Discord](https://discord.com/channels/1397307316814221323/1519778359641509948) и [GitHub](https://github.com/Kart0/MINECRAFT-1.5/issues)*
 
 
 **-karto**
 
-*Translated by: [XidCuzYes](put here your modrinth or curseforge link... or discord... whatever u want 😅)*
+*Translated by: XidCuzYes (Discord: @xidcuzyes)*
+*Переведено на русский: XidCuzYes (Discord: @xidcuzyes)*

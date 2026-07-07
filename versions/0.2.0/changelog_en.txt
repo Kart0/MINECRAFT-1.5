@@ -2,10 +2,10 @@
 
 ### **[0.2.0] UPDATE**
 
-This update brings many optimizations and take off redundant content to improve client stability, the update its necessary for enter the test-server inside the 'Multiplayer' Tab (every single MC1.5 feature will only be available on the server)
+This update brings many optimizations and take off redundant content to improve client stability, the update is necessary for enter the test-server inside the 'Multiplayer' Tab (every single MC1.5 feature will only be available on the server)
 
 <details>
-<summary>Wich version should I download?</summary>
+<summary>Which version should I download?</summary>
 
 | Modpack Version  | PC Specs |
 | :-------------: |:-------------:|
