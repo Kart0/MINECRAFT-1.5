@@ -1,0 +1,24 @@
+## **SEGUNDA ÚLTIMA BETA CERRADA de MC1.5**
+
+### **[0.2.0] ACTUALIZACIÓN**
+
+Ésta actualización trae muchas optimizaciones y saca contenido redundante para mejorar la estabilidad del cliente, la actualización es necesaria para poder entrar al servidor de pruebas (todas las caracteristicas de MC1.5 estarán activas solo en el servidor)
+
+<details>
+<summary>¿Que versión debo descargar?</summary>
+
+| Versión Modpack  | Especificaciones del dispositivo |
+| :-------------: |:-------------:|
+| Versión Full      | GPU Dedicada y más de 8gb de ram     |
+| Versión Lite      | Dispositivos gama baja     |
+
+</details>
+
+[TEASER IMAGE/VIDEO]
+
+***Nota del desarrollador***
+
+*Ojalá que todo funcione bien para la mayor cantidad de gente posible, quisiera que me dieran su Feedback tanto en [Discord](https://discord.com/channels/1397307316814221323/1519778359641509948) como en [GitHub](https://github.com/Kart0/MINECRAFT-1.5/issues)*
+
+
+**-karto**
