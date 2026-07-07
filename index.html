@@ -865,6 +865,7 @@
             }
 
             // Guardar títulos de sección para usar al crear los elementos
+            window._baseTitleText = t.base_version_title || '⚡ VERSIÓN BASE ⚡';
             window._updatesTitleText = t.updates_title || '📦 ACTUALIZACIONES 📦';
             
             // Actualizar títulos de sección ya existentes (si los hay)
@@ -1103,7 +1104,7 @@
             
             const hasLinks = hasDownloadLinks(version);
             const btnHtml = hasLinks ? 
-                `<button class="version-button" onclick="mostrarModalDescarga('${version.id}')">�?/button>` : '';
+                `<button class="version-button" onclick="mostrarModalDescarga('${version.id}')">⤓</button>` : '';
             
             el.innerHTML = `
                 <div class="version-info">
@@ -1149,7 +1150,7 @@
                 baseSection.className = 'base-version-section';
                 const baseTitle = document.createElement('div');
                 baseTitle.className = 'base-version-title';
-                baseTitle.textContent = window._baseTitleText || '�?VERSIÓN BASE �?;
+                baseTitle.textContent = window._baseTitleText || '⚡ VERSIÓN BASE ⚡';
                 baseSection.appendChild(baseTitle);
                 
                 if (baseVersion) {
