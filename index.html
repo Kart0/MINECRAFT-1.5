@@ -784,7 +784,7 @@
         // CONFIGURACIÓN
         // ============================================================
         const META_JSON_URL = 'https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/meta.json';
-        const BASE_VERSION_ID = '0.1.0';
+        const BASE_VERSION_ID = '0.2.0';
         const LANG_FILES_PATH = 'lang_files/';
         const CHANGELOG_BASE_URL = 'https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/main/versions/';
 
@@ -865,7 +865,6 @@
             }
 
             // Guardar títulos de sección para usar al crear los elementos
-            window._baseTitleText = t.base_version_title || '⚡ VERSIÓN BASE ⚡';
             window._updatesTitleText = t.updates_title || '📦 ACTUALIZACIONES 📦';
             
             // Actualizar títulos de sección ya existentes (si los hay)
@@ -1104,7 +1103,7 @@
             
             const hasLinks = hasDownloadLinks(version);
             const btnHtml = hasLinks ? 
-                `<button class="version-button" onclick="mostrarModalDescarga('${version.id}')">⤓</button>` : '';
+                `<button class="version-button" onclick="mostrarModalDescarga('${version.id}')">�?/button>` : '';
             
             el.innerHTML = `
                 <div class="version-info">
@@ -1150,7 +1149,7 @@
                 baseSection.className = 'base-version-section';
                 const baseTitle = document.createElement('div');
                 baseTitle.className = 'base-version-title';
-                baseTitle.textContent = window._baseTitleText || '⚡ VERSIÓN BASE ⚡';
+                baseTitle.textContent = window._baseTitleText || '�?VERSIÓN BASE �?;
                 baseSection.appendChild(baseTitle);
                 
                 if (baseVersion) {
