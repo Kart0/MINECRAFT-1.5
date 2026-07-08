@@ -1,26 +1,29 @@
-## **SECOND LAST MC1.5 CLOSED BETA**
+## **PENÚLTIMO CLOSED BETA DO MC 1.5**
 
 ### **[0.2.0] UPDATE**
 
-This update brings many optimizations and take off redundant content to improve client stability, the update its necessary for enter the test-server inside the 'Multiplayer' Tab (every single MC1.5 feature will only be available on the server)
+Essa atualização traz consigo diversas otimizaçõees e remove arquivos desnecessários para melhorar a estabilidade do client-side (seu computador), a atualização é necessária para entrar no servidor de testes localizado na aba "Multiplayer" (Todos os recursos presentes em MC 1.5 estão disponíveis apenas neste servidor)
 
 <details>
-<summary>Wich version should I download?</summary>
+<summary>Qual versão eu deveria baixar?</summary>
 
-| Modpack Version  | PC Specs |
+| Versão do Modpack | Requisitos para seu PC |
 | :-------------: |:-------------:|
-| Full Version      | Dedicated GPU and above 8gb ram     |
-| Lite Version      | Low-end devices     |
+| Versão Completa      | GPU dedicada e pelo menos 8gb de ram     |
+| Versão Otimizada      | Dispositivos com Baixo Recurso     |
 
 </details>
 
-[TEASER IMAGE/VIDEO]
+<video autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/versions/0.2.0/teaser_v0.2.0.webm" type="video/webm">
+  Tu navegador no soporta la etiqueta de video.
+</video>
 
-***Developer's Note***
+***Nota do Desenvolvedor***
 
-*Hopefully everything will work out well for as many people as possible, I would like to receive your feedback **both** on [Discord](https://discord.com/channels/1397307316814221323/1519778359641509948) and [GitHub](https://github.com/Kart0/MINECRAFT-1.5/issues)*
+Esperamos que tudo funcione perfeitamente para o máximo de pessoas possível, eu gostaria de receber seu feedback tanto no [Discord](https://discord.com/channels/1397307316814221323/1519778359641509948) quanto no [GitHub](https://github.com/Kart0/MINECRAFT-1.5/issues)
 
 
 **-karto**
 
-*Translated by: [SleepyCrafto](put here your modrinth or curseforge link... or discord... whatever u want 😅)*
+*Translated by: [Sleepy Crafto (@craftandoof)](https://modrinth.com/user/craftandoof) — A Animator, not a Translator *

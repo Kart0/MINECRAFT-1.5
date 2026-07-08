@@ -14,7 +14,10 @@
 
 </details>
 
-[TEASER IMAGE/VIDEO]
+<video autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/versions/0.2.0/teaser_v0.2.0.webm" type="video/webm">
+  Tu navegador no soporta la etiqueta de video.
+</video>
 
 ***Заметка разработчика***
 
