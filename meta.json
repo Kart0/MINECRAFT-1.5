@@ -14,7 +14,7 @@
             "promotions": {	
 				"downloads": {
 					"base": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.2.0/MC1.5.-.CLOSED.BETA.full.v0.2.0.mrpack",
-					"base_lite": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.2.0/MC1.5.-.CLOSED.BETA.full.v0.2.0.mrpack"
+					"base_lite": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.2.0/MC1.5.-.CLOSED.BETA.lite.v0.2.0.mrpack"
 				}
 			}
 		}
