@@ -2,7 +2,7 @@
 
 ### **[0.2.0] UPDATE**
 
-Essa atualização traz consigo diversas otimizaçõees e remove arquivos desnecessários para melhorar a estabilidade do client-side (seu computador), a atualização é necessária para entrar no servidor de testes localizado na aba "Multiplayer" (Todos os recursos presentes em MC 1.5 estão disponíveis apenas neste servidor)
+Essa atualização traz consigo diversas otimizações e remove arquivos desnecessários para melhorar a estabilidade do client-side (seu computador), a atualização é necessária para entrar no servidor de testes localizado na aba "Multiplayer" (Todos os recursos presentes em MC 1.5 estão disponíveis apenas neste servidor)
 
 <details>
 <summary>Qual versão eu deveria baixar?</summary>
