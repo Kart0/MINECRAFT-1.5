@@ -11,10 +11,16 @@
 		{
             "id": "0.2.0",
             "releasedAt": 1783480059516,
+            "promotions": {
+			}
+		},
+		{
+            "id": "0.3.0",
+            "releasedAt": 1785649445058,
             "promotions": {	
 				"downloads": {
-					"base": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.2.0/MC1.5.-.CLOSED.BETA.full.v0.2.0.mrpack",
-					"base_lite": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.2.0/MC1.5.-.CLOSED.BETA.lite.v0.2.0.mrpack"
+					"base": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.3.0/MC1.5.-.CLOSED.BETA.-full-.v0.3.0.mrpack",
+					"base_lite": "https://github.com/Kart0/MINECRAFT-1.5/releases/download/v0.3.0/MC1.5.-.CLOSED.BETA.-lite-.v0.3.0.mrpack"
 				}
 			}
 		}

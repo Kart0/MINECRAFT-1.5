@@ -1,0 +1,24 @@
+## **TERCERA ÚLTIMA BETA CERRADA de MC1.5**
+
+### **[0.3.0] ACTUALIZACIÓN**
+
+Ésta actualización trae muchos arreglos/compats para que todo tenga una congruencia visual de forma nativa
+
+También a la batalla del dragón se le ha hecho un rework completo para modernizarla y subirle la dificultad
+
+<details>
+<summary>¿Que versión debo descargar?</summary>
+
+| Versión Modpack  | Especificaciones del dispositivo |
+| :-------------: |:-------------:|
+| Versión Full      | GPU Dedicada y más de 8gb de ram     |
+| Versión Lite      | Dispositivos gama baja     |
+
+![mc1.5_0.3.0](https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/versions/0.3.0/teaser_0.3.0.gif)
+
+***Nota del desarrollador***
+
+*Ojalá que todo funcione bien para la mayor cantidad de gente posible, quisiera que me dieran su Feedback tanto en [Discord](https://discord.com/channels/1397307316814221323/1519778359641509948) como en [GitHub](https://github.com/Kart0/MINECRAFT-1.5/issues)*
+
+
+**-karto**
