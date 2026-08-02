@@ -14,6 +14,8 @@ The dragon battle has also been completely reworked to modernize it and increase
 | Full Version      | Dedicated GPU and above 8gb ram     |
 | Lite Version      | Low-end devices     |
 
+</details>
+
 ![mc1.5_0.3.0](https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/versions/0.3.0/teaser_0.3.0.gif)
 
 ***Developer's Note***

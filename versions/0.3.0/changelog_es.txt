@@ -14,6 +14,8 @@ También a la batalla del dragón se le ha hecho un rework completo para moderni
 | Versión Full      | GPU Dedicada y más de 8gb de ram     |
 | Versión Lite      | Dispositivos gama baja     |
 
+</details>
+
 ![mc1.5_0.3.0](https://raw.githubusercontent.com/Kart0/MINECRAFT-1.5/refs/heads/main/versions/0.3.0/teaser_0.3.0.gif)
 
 ***Nota del desarrollador***
